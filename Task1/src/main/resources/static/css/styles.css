@@ -1,0 +1,90 @@
+/* src/main/resources/static/css/styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+input:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}

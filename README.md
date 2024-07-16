@@ -37,6 +37,14 @@ To run the Spring Boot project locally, follow these steps:
     ```sh
     mvn clean install
     ```
+    
+4. **Short cut way **
+   ```sh
+   //just run the __Application.java file
+   //Present in the src/main/java/com/sahil/ProjectName/
+   ```
+
+   **or**
 
 4. **Run the Project**
 
@@ -50,7 +58,7 @@ To run the Spring Boot project locally, follow these steps:
 
 ## Contact
 
-For any questions or suggestions, feel free to reach out to me at [your-email@example.com].
+For any questions or suggestions, feel free to reach out to me at [patilsahil350@example.com].
 
 ---
 

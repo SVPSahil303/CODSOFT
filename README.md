@@ -46,13 +46,13 @@ To run the Spring Boot project locally, follow these steps:
 
    **or**
 
-4. **Run the Project**
+5. **Run the Project**
 
     ```sh
     mvn spring-boot:run
     ```
 
-5. **Access the Application**
+6. **Access the Application**
 
     Open your web browser and navigate to `http://localhost:8080`.
 

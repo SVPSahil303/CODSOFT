@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Marks Input</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Marks</h1>
+        <form action="/calculate" method="post">
+            <div class="form-group">
+                <label for="numberOfSubjects">Number of Subjects:</label>
+                <input type="number" id="numberOfSubjects" name="numberOfSubjects" required>
+            </div>
+            <div id="marksContainer" class="form-group">
+                <label for="marks">Marks:</label><br>
+                <!-- Dynamically add input fields for marks here -->
+            </div>
+            <button type="button" id="addMarksButton" onclick="addMarksFields()">Add Marks Fields</button><br><br>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    <script>
+        function addMarksFields() {
+            var numberOfSubjects = document.getElementById('numberOfSubjects').value;
+            var marksContainer = document.getElementById('marksContainer');
+            marksContainer.innerHTML = ''; // Clear previous marks fields
+
+            for (var i = 0; i < numberOfSubjects; i++) {
+                var input = document.createElement('input');
+                input.type = 'number';
+                input.name = 'marks';
+                input.placeholder = 'Enter marks for subject ' + (i + 1);
+                input.classList.add('mark-input');
+                input.required = true;
+                marksContainer.appendChild(input);
+                marksContainer.appendChild(document.createElement('br'));
+            }
+
+            document.getElementById('addMarksButton').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <center>
+        <p>Total Marks: <span th:text="${result.totalMarks}"></span></p>
+        <p>Average: <span th:text="${result.average}"></span> </p>
+        <p>Grade: <span th:text="${result.grade}"></span> </p>
+    </center>
+    </div>
+</body>
+</html>

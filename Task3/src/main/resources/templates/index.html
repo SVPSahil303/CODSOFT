@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>ATM Machine</h1>
+    <p class="balance" th:text="'Current Balance: $' + ${balance}"></p>
+    <form action="/atm/Deposit" method="post" class="atm-form">
+        <label for="deposit">Deposit Amount:</label>
+        <input type="number" name="amount" id="deposit" required>
+        <button type="submit">Deposit</button>
+    </form>
+    <form action="/atm/Withdraw" method="post" class="atm-form">
+        <label for="withdraw">Withdraw Amount:</label>
+        <input type="number" name="amount" id="withdraw" required>
+        <button type="submit">Withdraw</button>
+    </form>
+    <p class="message" th:if="${message}" th:text="${message}"></p>
+</div>
+</body>
+</html>

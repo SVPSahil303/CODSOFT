@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Student</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+    <h1>Edit Student</h1>
+</header>
+<div class="container">
+    <form action="#" th:action="@{/students/edit}" th:object="${student}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}"><br>
+        <label for="rollNumber">Roll Number:</label>
+        <input type="number" id="rollNumber" th:field="*{rollNumber}"><br>
+        <label for="stream">Stream:</label>
+        <input type="text" id="stream" th:field="*{stream}"><br>
+        <button type="submit">Update Student</button>
+    </form>
+    <a href="/">Back to Home</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Students List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+    <h1>Students List</h1>
+</header>
+<div class="container">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.name}">Name</td>
+            <td th:text="${student.rollNumber}">Roll Number</td>
+            <td th:text="${student.stream}">Stream</td>
+            <td class="actions">
+                <a th:href="@{/students/delete/{id}(id=${student.id})}">Delete</a> |
+                <a th:href="@{/students/edit/{id}(id=${student.id})}">Edit</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/">Back to Home</a>
+</div>
+</body>
+</html>
